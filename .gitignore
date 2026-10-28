@@ -1,0 +1,28 @@
+# User secrets (NEVER commit)
+.env
+.env.*
+!.env.example
+config/tunnel.local.json
+config/*local*.yaml
+*secret*.json
+# Local API/cache/journals
+.venv/
+venv/
+data/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.lock
+backtest_report.csv
+# Build/test outputs
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+Thumbs.db
+dist/
+build/
+*.spec
+*.egg-info/

@@ -1,0 +1,59 @@
+mode: demo                # demo | live (live requires credentials)
+symbols: [NIFTY, SENSEX]
+strikes_each_side: 2     # 5 strikes x CE/PE x 2 indices = 20 contracts
+timeframe_minutes: 3
+parallel_contracts: 4      # concurrent workers, globally limited to <=4 REST data starts/sec
+cache_max_minutes: 4500  # retain warm-up across sessions
+# Automatic scanner start when GUI opens. MCP starts only when you click Start MCP.
+auto_start_scanner: true
+history_days: 8          # warm up EMA200 where contract history available
+poll_seconds: 30         # data fetch; signal only on completed 3-minute bars
+chain_refresh_seconds: 900
+max_data_age_seconds: 240
+candle_finalization_delay_seconds: 10 # wait after 3m boundary to avoid premature REST reads
+max_quote_age_seconds: 90
+max_spread_pct: 3.0
+max_premium: 2000
+min_premium: 5
+max_open_manual_positions: 1
+max_risk_per_trade_rupees: 1000
+max_lots: 2
+commission_per_order_rupees: 20    # example ONLY, change to actual broker pricing
+slippage_ticks: 2
+allow_extended_signals: true
+strategy:
+  atr_period: 10
+  factor: 4.0
+  ema50_length: 50
+  ema200_length: 200
+  enable_long: true
+  enable_short: false
+  use_ema200_filter: false
+  ema200_na_passes: true
+  use_vwap_at_flip: true
+  use_vwap_at_break: true
+  use_ema200_dist_filter: false
+  ema200_dist_mult: 2.0
+  ema200_check_rising: true
+  use_st_proximity_filter: true
+  st_proximity_atr_mult: 1.5
+  st_proximity_na_passes: true
+  extend_candles: 15
+  entry_cutoff: '15:00'
+  force_close: '15:20'
+  target_mode: auto        # auto | custom | percentage | atr
+  target_pts_custom: 20
+  target_pct: 0.10
+  target_atr_mult: 1.5
+  sl_mode: structural      # structural | fixed | percentage | atr
+  sl_pts_custom: 10
+  sl_pct: 0.05
+  sl_atr_mult: 0.8
+  max_sl_pts: 40
+  vcb_length: 21
+  use_vol_filter: false
+  use_green_vol_filter: false
+  green_vol_multiplier: 1.0
+  use_red_vol_filter: false
+  red_vol_multiplier: 1.0
+  skip_first_n: 1

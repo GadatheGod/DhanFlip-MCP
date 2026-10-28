@@ -1,0 +1,9 @@
+requests>=2.32,<3
+pandas>=2.1,<3
+numpy>=1.26,<3
+python-dotenv>=1,<2
+PyYAML>=6,<7
+mcp>=1.12,<2
+websockets>=13,<17
+matplotlib>=3.8,<4
+pytest>=8,<10

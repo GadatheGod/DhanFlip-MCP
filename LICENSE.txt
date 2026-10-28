@@ -1,0 +1,4 @@
+Project code generated for the requesting user. You may modify and use it for private analysis.
+The bundled original strategy file is user-provided and retains the user's rights.
+This is provided without warranties of availability, correctness, or fitness for trading.
+Market risk can exceed a modeled loss due to gaps, fees and execution conditions.

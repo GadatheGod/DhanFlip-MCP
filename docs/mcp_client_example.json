@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "dhanflip-cache-only": {
+      "command": "/ABSOLUTE/PATH/TO/DhanFlip_MCP_V2/.venv/bin/python",
+      "args": ["-m", "dhanflip", "mcp"],
+      "cwd": "/ABSOLUTE/PATH/TO/DhanFlip_MCP_V2"
+    }
+  },
+  "note": "Example only; adapt to your MCP client/tunnel syntax. This service reads GUI SQLite cache and makes zero Dhan API calls."
+}
