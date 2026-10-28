@@ -1,3 +1,5 @@
+CAUTION / DISCLAIMER : USE AT YOUR OWN RISK . I AM NOT RESPONSIBLE FOR ANY TRADING LOSSES ARISING OUT OF IT. THIS IS FOR EDUCATIONAL PURPOSE ONLY. 
+
 # DhanFlip V3 — NIFTY/SENSEX Options Scanner + Optional ChatGPT MCP
 
 **Windows + Linux · one-click desktop launch after initial setup · 3-minute option-premium charts · DhanHQ paid data · local SQLite cache · manual execution only.**
@@ -90,18 +92,6 @@ python -m dhanflip backtest      # theoretical replay, NOT proven real-market pe
 
 Tests are offline (mock/synthetic). The GUI also has an Xvfb/Linux headless smoke-test verification in the delivery report. **Authenticated live Dhan API behavior and actual ChatGPT tunnel registration cannot be validated without your account/desktop.** Do not interpret offline green tests as first-time-right live certification.
 
-## GITHUB PUBLISHING
-
-The repository should start **PRIVATE** to review code before a public release. Source includes `.github/workflows/ci.yml` (offline tests on Windows/Linux and Python 3.11/3.12), `PUBLISH_GITHUB.sh` / `PUBLISH_GITHUB_WINDOWS.ps1`, and restrictive `.gitignore`. Neither script runs automatically. GitHub CLI must already be authenticated (`gh auth login`). Default destination is `GadatheGod/DhanFlip-MCP`.
-
-```bash
-bash PUBLISH_GITHUB.sh
-```
-
-Windows PowerShell: `powershell -ExecutionPolicy Bypass -File .\PUBLISH_GITHUB_WINDOWS.ps1`.
-
-Publishing requires GitHub permission to create/push the repo; **the ZIP alone does not imply that GitHub has been published**. The scripts explicitly stage only source/documentation filenames, never `.env`, `.env.tunnel`, local SQLite, trade history or logs. Verify `git diff --cached` before publishing.
-
 ## SOURCE TREE
 
 ```text
@@ -132,3 +122,6 @@ DhanFlip_MCP_V3/
 - [Dhan instrument master](https://dhanhq.co/docs/v2/instruments/)
 - [Dhan market feed](https://dhanhq.co/docs/v2/live-market-feed/)
 - [OpenAI tunnel-client YAML schema](https://github.com/openai/tunnel-client/blob/master/docs/configuration.md)
+- 
+CAUTION / DISCLAIMER : USE AT YOUR OWN RISK . I AM NOT RESPONSIBLE FOR ANY TRADING LOSSES ARISING OUT OF IT. THIS IS FOR EDUCATIONAL PURPOSE ONLY.
+BE CAREFUL WITH YOUR API KEYS, PASSWORDS ETC . 
